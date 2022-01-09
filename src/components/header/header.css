@@ -1,0 +1,43 @@
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 10px;
+  background-color: steelblue;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 50%;
+  align-items: center;
+  margin: 0px;
+}
+
+.menu a {
+  width: 25%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu .active {
+  background-color: black;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
