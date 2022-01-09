@@ -5,7 +5,7 @@ import Home from './components/home/home';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header title='Digital Media Arts'/>
       <Routes>
         <Route exact path='/'
@@ -13,7 +13,7 @@ function App() {
         >
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

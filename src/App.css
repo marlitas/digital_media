@@ -1,9 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto&display=swap');
+
+
 body {
+  margin-top: 11vh;
   background-color: black;
   color: white;
 }
 
+h1 {
+  font-family: 'Libre Barcode 39 Text', 'Roboto', Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+h2, h3, h4, h5, p, a, form, table, tr, td {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
 .container {
   width: 80%;
-  margin: auto;
+  margin: 20px auto;
+  padding: 10px;
 }
