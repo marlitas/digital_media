@@ -9,7 +9,7 @@ function syllabus() {
   return (
     <>
       <div className='container'>
-        <h2>Syllabus</h2>
+        <h2 className='subheading'>Syllabus</h2>
         <table className='class-info'>
           <tr>
             <th>Instructor</th>
@@ -45,9 +45,13 @@ function syllabus() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-            Students will explore the process, mediums, and applications of digital media art. As a class we will investigate various digital media forms through creative projects and discussions. Students will be given tools to work with a variety of software and technology to create their projects, and will leave the class with a small portfolio of the work they created, as well as a deeper understanding of the role digital media art plays in our lives. 
-
-            Canvas will be used throughout the semester to communicate assignments, rubrics, and grades, as well as any course announcements. Links to additional learning material will be found in Canvas as well. 
+              <p>
+                Students will explore the process, mediums, and applications of digital media art. As a class we will investigate various digital media forms through creative projects and discussions. Students will be given tools to work with a variety of software and technology to create their projects, and will leave the class with a small portfolio of the work they created, as well as a deeper understanding of the role digital media art plays in our lives. 
+              </p>
+              <p>
+                **Canvas will be used throughout the semester to communicate assignments, rubrics, and grades, as well as any course announcements. Links to additional learning material will be found on Canvas as well as the class website.** 
+              </p>
+            
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -61,7 +65,15 @@ function syllabus() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Laptop:Students are required to bring a laptop to every class. The majority of assignments will be done on a computer and failing to bring your computer to class can severely hinder your progress and experience. If you are unable to obtain a laptop for the semester, please reach out to me as soon as possible. Hard drive:Although we will be working on our own computers throughout the semester, there may be points where we need to share files, or just plain want to have a back-up (computer meltdown anyone?). A portable hard drive of at least 16 GB is required. There is a resource sheet with links to various hard drives in canvas, as well as instructions on how to format your hard drive if necessary.  
+              <h3>Laptop</h3>
+                <p>
+                  Students are required to bring a laptop to every class. The majority of assignments will be done on a computer and failing to bring your computer to class can severely hinder your progress and experience. If you are unable to obtain a laptop for the semester, please reach out to me as soon as possible.
+                </p>
+
+                <h3>Hard Drive</h3>
+                <p>
+                  Although we will be working on our own computers throughout the semester, there may be points where we need to share files, or just plain want to have a back-up (computer meltdown anyone?). A portable hard drive of at least 16 GB is required. There is a resource sheet with links to various hard drives in canvas, as well as instructions on how to format your hard drive if necessary.
+                </p>   
 
             </Typography>
           </AccordionDetails>
@@ -108,7 +120,7 @@ function syllabus() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-            Due to the instability caused by Covid-19 there is added flexibility to assignments and due dates. 
+            Due to the instability caused by Covid-19 there is added flexibility to assignments and due dates: 
             <ul>
               <li>Each student’s three lowest grades (including zeros or incompletes) will be dropped for the semester. The Midterm and Final are excluded.</li>
               <li>Due dates extend to the end of each module. However, it is recommended that students practice time management and turn assignments in by the suggested completion date.</li>

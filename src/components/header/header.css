@@ -2,13 +2,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 9vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 10px 0px;
+  border-bottom: .5px solid #EFF285;
 }
 
 .menu {
@@ -29,7 +30,7 @@
 }
 
 .menu a:hover {
-  font-weight: bold;
+  color:#F28972;
 }
 
 .menu .active {

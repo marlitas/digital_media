@@ -1,8 +1,62 @@
-table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
-}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto:wght@400;500;700;900&display=swap');
+
+/* table, th, td {
+  
+} */
 
 table {
   width: 100%;
+}
+
+th {
+  color:#F26F63;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 10px;
+  text-align: right;
+}
+
+
+td {
+  text-align: right;
+  padding: 5px;
+}
+
+li {
+  padding: 10px 0px;
+}
+
+.MuiPaper-root.MuiAccordion-root {
+  background-color: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .4)
+}
+
+
+.MuiTypography-root.MuiTypography-body1 {
+  color: rgba(255, 255, 255, .85);
+}
+
+.MuiAccordionSummary-content .MuiTypography-root {
+  color: #F26F63;
+  font-weight: bold;
+  text-align: right;
+  margin: 0px 10px;
+  font-size: 1.5em;
+}
+
+.MuiAccordionSummary-content {
+  justify-content: flex-end;
+}
+
+.MuiSvgIcon-root {
+  color: #EFF285;
+}
+
+.MuiPaper-root.MuiAccordion-root:first-of-type {
+  border-radius: 0;
+}
+
+.MuiPaper-root.MuiAccordion-root:last-of-type {
+  border-radius: 0;
 }
