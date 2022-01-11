@@ -27,7 +27,7 @@ function syllabus() {
             <th>Contact</th>
           </tr>
           <tr>
-            <td>THTR</td>
+            <td>THTR C331</td>
             <td>Tuesdays 11:15am - 12:15pm</td>
             <td>marla.schulz@colorado.edu</td>
           </tr>
