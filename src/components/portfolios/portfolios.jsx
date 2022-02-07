@@ -20,15 +20,19 @@ function portfolios() {
         return (
             <Student
                 name={student.name}
+                avatar='https://picsum.photos/200'
             />
         );
     });
 
     return (
-        <div>
+        <div class="container">
+            <div class="card-container">
             {studentCards}
-            <Outlet />
+                <Outlet />
+            </div>
         </div>
+        
     )
 }
 
