@@ -1,39 +1,31 @@
-.nav-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 9vh;
-  display: flex;
-  flex-direction: row;
+.navbar-expand-lg {
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px 0px;
   border-bottom: .5px solid #EFF285;
+  width: 100%;
+  align-items: center;
+  padding: 10px 0px;
 }
 
-.menu {
+.me-auto.navbar-nav {
   position: relative;
   display: flex;
-  flex-direction: row;
   list-style-type: none;
   justify-content: space-around;
-  width: 40%;
+  width: 100%;
   align-items: center;
-  margin: 0px;
 }
 
-.menu a {
-  width: 25%;
+.me-auto a {
   text-align: center;
   text-decoration: underline;
+  padding: 5px;
 }
 
-.menu a:hover {
+ a:hover {
   color:#F28972;
 }
 
-.menu .active {
+.me-auto .navbar-nav .active {
   background-color: black;
   color: white;
   height: 100%;
