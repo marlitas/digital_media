@@ -1,6 +1,7 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
 import Student from '../StudentCard/studentCard';
-import './portfolios.css'
+import { Container } from 'react-bootstrap';
+import './portfolios.css';
 
 function portfolios() {
 
@@ -26,12 +27,12 @@ function portfolios() {
     });
 
     return (
-        <div class="container">
+        <Container>
             <div class="card-container">
             {studentCards}
                 <Outlet />
             </div>
-        </div>
+        </Container>
         
     )
 }

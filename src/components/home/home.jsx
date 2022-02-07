@@ -1,15 +1,16 @@
 import './home.css';
 import Syllabus from '../syllabus/syllabus';
-import Calendar from '../calendar/calendar'
+import Calendar from '../calendar/calendar';
+import { Container } from 'react-bootstrap';
 
 function home() {
   return (
     <>
       <Syllabus />
       <Calendar />
-      <div className='container'>
+      <Container>
         <a href="https://www.colorado.edu/academicaffairs/node/821/attachment" download>Syllabus Statements</a>
-      </div>
+      </Container>
     </>
   )
 }

@@ -2,7 +2,6 @@
 
 
 body {
-  margin-top: 12vh;
   background-color: black;
   color: rgba(255, 255, 255, .85);
   > .footer {
@@ -75,4 +74,22 @@ a {
 
 .card-heading:hover{
   color:#F26F63;
+}
+
+@media only screen and (max-width: 770px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-family: 'Roboto';
+    font-size: 1.5em;
+  }
+
+  .card-heading {
+    font-size: 1em;
+    font-weight: 400;
+  }
 }
