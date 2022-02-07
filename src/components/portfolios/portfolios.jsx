@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Student from '../StudentCard/studentCard';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './portfolios.css';
 
 function portfolios() {
@@ -19,19 +19,21 @@ function portfolios() {
 
     const studentCards = getStudents.map((student) => {
         return (
-            <Student
+            <Col>
+                <Student
                 name={student.name}
                 avatar='https://picsum.photos/200'
-            />
+                />
+            </Col>
         );
     });
 
     return (
         <Container>
-            <div class="card-container">
-            {studentCards}
-                <Outlet />
-            </div>
+            <Row xs={2} md={3} lg={4}>
+                {studentCards}
+                    <Outlet />
+            </Row>
         </Container>
         
     )
