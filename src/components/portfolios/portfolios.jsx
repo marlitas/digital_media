@@ -6,14 +6,25 @@ import './portfolios.css';
 function portfolios() {
 
     const getStudents = [
-        {
-            name: 'Sparky'
+        {   id: 1,
+            attributes: {
+                name: 'Sparky',
+                avatar_url: 'https://picsum.photos/200'
+            }
+            
+        },
+        {   id: 2,
+            attributes: {
+                name: 'Marla',
+                avatar_url: 'https://picsum.photos/200'
+            }
         },
         {
-            name: 'Marla'
-        },
-        {
-            name: 'Evan'
+            id: 3,
+            attributes: {
+                name: 'Evan',
+                avatar_url: 'https://picsum.photos/200'
+            }
         }
     ]
 
@@ -21,8 +32,8 @@ function portfolios() {
         return (
             <Col>
                 <Student
-                name={student.name}
-                avatar='https://picsum.photos/200'
+                name={student.attributes.name}
+                avatar= {student.attributes.avatar_url}
                 />
             </Col>
         );
