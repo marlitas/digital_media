@@ -5,35 +5,17 @@ import './portfolios.css';
 
 function portfolios() {
 
-    const getStudents = [
-        {   id: 1,
-            attributes: {
-                name: 'Sparky',
-                avatar_url: 'https://picsum.photos/200'
-            }
-            
-        },
-        {   id: 2,
-            attributes: {
-                name: 'Marla',
-                avatar_url: 'https://picsum.photos/200'
-            }
-        },
-        {
-            id: 3,
-            attributes: {
-                name: 'Evan',
-                avatar_url: 'https://picsum.photos/200'
-            }
-        }
-    ]
+    const getStudents = fetch('https://digital-media-api.herokuapp.com/api/v1/students')
+                        .then(response => response.json())
+                        .then(data => console.log(data))
 
-    const studentCards = getStudents.map((student) => {
+    const studentCards = getStudents['data'].map((student) => {
         return (
             <Col>
                 <Student
                 name={student.attributes.name}
                 avatar= {student.attributes.avatar_url}
+                id={student.id}
                 />
             </Col>
         );

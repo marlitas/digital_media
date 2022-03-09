@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './studentCard.css';
 
-function studentCard({ name, avatar }) {
+function studentCard({ name, avatar, id }) {
     return (
         <Link to={name}>
             <div className="card">

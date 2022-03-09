@@ -24,3 +24,5 @@ function portfolio() {
         </Container>
     )
 }
+
+export default portfolio
