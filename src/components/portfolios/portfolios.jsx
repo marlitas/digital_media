@@ -6,7 +6,6 @@ import './portfolios.css';
 
 function Portfolios() {
     const [isLoaded, setIsLoaded] = useState(false);
-    const [students, setStudents] = useState([]);
     const [studentCards, setStudentCards] = useState([]);
 
     useEffect( () => {
