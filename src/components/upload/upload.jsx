@@ -5,12 +5,13 @@ function Upload() {
 
     const [name, setName] = useState('');
     const [major, setMajor] = useState('');
-    const [avatar, setAvatar] = useState();
     const [enrolled, setEnrolled] = useState(true);
     const [about, setAbout] = useState('');
     const fileInput = createRef();
 
     const handleSubmit = event => {
+        const avatar = document.querySelector('#avatar-input').files[0]
+
         const student = {
             name: name,
             major: major,
@@ -19,7 +20,6 @@ function Upload() {
             about: about
         }
 
-        console.log(student)
         event.preventDefault();
         createStudent(student)
     }
@@ -57,7 +57,7 @@ function Upload() {
                 />
                 <label>
                     Upload avatar:
-                    <input type='file' ref={fileInput} />
+                    <input id='avatar-input' type='file' accept="image/png" ref={fileInput} />
                 </label>
 
                 <button onClick={handleSubmit}>SUBMIT</button>

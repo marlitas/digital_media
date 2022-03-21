@@ -27,7 +27,6 @@ const createPresignedUrl = async(file, byte_size, checksum) => {
 
 export const createStudent = async(studentInfo) => {
     const { avatar, name, enrolled, about, major } = studentInfo
-
     const checksum = await fileChecksum(avatar)
     const presignedFileParams = await createPresignedUrl(avatar, avatar.size, checksum)
 
