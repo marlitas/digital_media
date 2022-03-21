@@ -1,11 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Header from './components/header/header';
 import Home from './components/home/home';
 import Footer from './components/footer/footer'
 import Portfolios from './components/portfolios/portfolios'
 import Portfolio from './components/portfolios/portfolio'
+import Upload from './components/upload/upload'
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         </Route>
         <Route path='/resources'
         >
+        </Route>
+        <Route path='/upload' element={<Upload/>}>
         </Route>
       </Routes>
       <Footer />
