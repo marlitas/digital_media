@@ -1,6 +1,6 @@
 import CryptoJS from 'crypto-js'
 
-const md5FromFile = (file) => {
+export const md5FromFile = (file) => {
   // FileReader is event driven, does not return promise
   // Wrap with promise api so we can call w/ async await
   // https://stackoverflow.com/questions/34495796
