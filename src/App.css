@@ -2,7 +2,6 @@
 
 
 body {
-  margin-top: 12vh;
   background-color: black;
   color: rgba(255, 255, 255, .85);
   > .footer {
@@ -50,4 +49,52 @@ a {
   text-align: center;
   padding: 10px;
   margin: 20px 0px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 5%;
+  background-color: rgba(194, 242, 242, .15);
+  border-radius: 5px;
+  border-bottom: solid #F26F63;
+}
+
+.card-heading {
+  text-align: center;
+}
+
+.card-heading:hover{
+  color:#F26F63;
+}
+
+.spinner-border {
+  display: block;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 770px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-family: 'Roboto';
+    font-size: 1.5em;
+  }
+
+  .card-heading {
+    font-size: 1em;
+    font-weight: 400;
+  }
 }

@@ -4,11 +4,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Container } from 'react-bootstrap';
 
 function syllabus() {
   return (
     <>
-      <div className='container'>
+      <Container>
         <h2 className='subheading'>Syllabus</h2>
         <table className='class-info'>
           <tr>
@@ -32,9 +33,9 @@ function syllabus() {
             <td>marla.schulz@colorado.edu</td>
           </tr>
         </table>
-      </div>
+      </Container>
       
-      <div className='container'>
+      <Container>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -131,7 +132,7 @@ function syllabus() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </Container>
     </>
   )
 }
