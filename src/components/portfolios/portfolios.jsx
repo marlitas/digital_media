@@ -20,7 +20,7 @@ function Portfolios() {
                                             <Student
                                             name={student.attributes.name}
                                             avatar= {student.attributes.avatar_url}
-                                            id={student.id}
+                                            key={student.id}
                                             />
                                         </Col>
                                     );
