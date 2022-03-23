@@ -12,25 +12,25 @@ function App() {
   return (
     <>
       <Header title='Digital Media Arts'/>
-      <Routes>
-        <Route exact path='/'
-          element={<Home/>}
-        >
-        </Route>
-        <Route path='/portfolios'
-          element={<Portfolios/>}
-        >
-          <Route path=':name' element={<Portfolio/>}/>
-        </Route>
-        <Route path='/contact'
-        >
-        </Route>
-        <Route path='/resources'
-        >
-        </Route>
-        <Route path='/upload' element={<Upload/>}>
-        </Route>
-      </Routes>
+        <Routes>
+          
+          <Route exact path='/'
+            element={<Home/>}
+          >
+          </Route>
+          <Route path='/portfolios'>
+            <Route index element={<Portfolios />}/>
+            <Route path=':name' element={<Portfolio/>}/>
+          </Route>
+          <Route path='/contact'
+          >
+          </Route>
+          <Route path='/resources'
+          >
+          </Route>
+          <Route path='/upload' element={<Upload/>}>
+          </Route>
+        </Routes>
       <Footer />
     </>
   );
