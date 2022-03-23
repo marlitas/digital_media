@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Student from '../StudentCard/studentCard';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import {useState, useEffect} from 'react';
 import './portfolios.css';
 
@@ -27,15 +27,28 @@ function Portfolios() {
                                 }));
                             })
     })
-    
-    return (
-        <Container>
-            <Row xs={2} md={3} lg={4}>
-                {studentCards}
-                    <Outlet />
-            </Row>
-        </Container>
-    )
+
+    if(isLoaded) {
+        return (
+            <Container>
+                <Row xs={2} md={3} lg={4}>
+                    {studentCards}
+                        <Outlet />
+                </Row>
+            </Container>
+        )
+    }
+    else {
+        return (
+            <div className='container'>
+                <div className='section'>
+                     <Spinner animation='border' variant='warning' role='status'>
+                         <span className="visually-hidden">"Loading..."</span>
+                     </Spinner>
+                </div>
+            </div>
+        )
+    } 
 }
 
 export default Portfolios

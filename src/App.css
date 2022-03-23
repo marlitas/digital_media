@@ -76,6 +76,11 @@ a {
   color:#F26F63;
 }
 
+.spinner-border {
+  display: block;
+  margin: 20px auto;
+}
+
 @media only screen and (max-width: 770px) {
   h1 {
     font-size: 2.5em;
