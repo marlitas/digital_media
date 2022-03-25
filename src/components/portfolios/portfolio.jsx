@@ -9,17 +9,6 @@ function Portfolio() {
     const [student, setStudent] = useState({})
     const name = useParams().name
 
-    // useEffect( () => {
-    //     fetch(`https://digital-media-api.herokuapp.com/api/v1/students/${name.name}`)
-    //             .then(response => response.json())
-    //             .then(
-    //                 (data) => {
-    //                     setStudent(data.data)
-    //                     setIsLoaded(true); 
-    //                 }
-    //             )
-    // })
-
     const studentData = () => {
         getStudent(name)
             .then((data) => {
