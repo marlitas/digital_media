@@ -7,7 +7,7 @@ import Footer from './components/footer/footer'
 import Portfolios from './components/portfolios/portfolios'
 import Portfolio from './components/portfolios/portfolio'
 import Upload from './components/upload/upload'
-import Update from './components/update/update'
+import Admin from './components/admin/admin'
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           </Route>
           <Route path='/upload' element={<Upload/>}>
           </Route>
-          <Route path='/update' element={<Update/>}>
+          <Route path='/update' element={<Admin/>}>
           </Route>
         </Routes>
       <Footer />

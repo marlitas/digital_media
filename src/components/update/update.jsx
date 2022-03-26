@@ -25,14 +25,15 @@ function Update(name) {
     }
 
     const studentData = () => {
-        getStudent(name)
+
+        getStudent(name.name)
             .then((data) => {
                 setStudent(data.data)
-                setMajor(data.data.attributes.major)
+                if(data.data.attributes.major) setMajor(data.data.attributes.major)
                 setEnrolled(data.data.attributes.enrolled)
-                setAbout(data.data.attributes.about)
-                setCode(data.data.attributes.code)
-                setVideo(data.data.attributes.video)
+                if (data.data.attributes.about) setAbout(data.data.attributes.about)
+                if (data.data.attributes.code) setCode(data.data.attributes.code)
+                if (data.data.attributes.video) setVideo(data.data.attributes.video)
             })
     }
 
@@ -42,7 +43,7 @@ function Update(name) {
 
     return (
         <div className="container">
-            <h2>Update {name}</h2>
+            {/* <h2>Update {name}</h2> */}
             <form>
                 <input 
                     type='text'

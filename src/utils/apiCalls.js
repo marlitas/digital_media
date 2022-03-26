@@ -13,7 +13,7 @@ export const postData = (url, data) => {
 
 export const getStudent = async(name) => {
     const response = await fetch(`https://digital-media-api.herokuapp.com/api/v1/students/${name}`);
-    return await response.json();
+    return await response.json()
 };
 
 export const getStudents = async() => {
