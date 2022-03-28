@@ -65,7 +65,7 @@ function Portfolio() {
                         <Col s lg={8}>
                             <div className='column-wrapper'>
                                 <div className='video'>
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hqCzgNw9Hqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="100%" height="100%" src={student.attributes.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </Col>
