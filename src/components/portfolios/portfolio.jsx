@@ -1,23 +1,25 @@
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import { useParams} from 'react-router-dom';
 import {useState, useEffect} from 'react';
+import {getStudent} from '../../utils/apiCalls'
 import './portfolio.css';
 
 function Portfolio() {
     const [isLoaded, setIsLoaded] = useState(false)
     const [student, setStudent] = useState({})
-    const name = useParams()
+    const name = useParams().name
 
-    useEffect( () => {
-        fetch(`https://digital-media-api.herokuapp.com/api/v1/students/${name.name}`)
-                .then(response => response.json())
-                .then(
-                    (data) => {
-                        setStudent(data.data)
-                        setIsLoaded(true); 
-                    }
-                )
-    })
+    const studentData = () => {
+        getStudent(name)
+            .then((data) => {
+                setStudent(data.data)
+                setIsLoaded(true);
+            })
+    };
+
+    useEffect(() => {
+        studentData();
+    }, []);
 
 
 
@@ -63,7 +65,7 @@ function Portfolio() {
                         <Col s lg={8}>
                             <div className='column-wrapper'>
                                 <div className='video'>
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hqCzgNw9Hqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="100%" height="100%" src={student.attributes.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </Col>

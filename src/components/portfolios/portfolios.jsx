@@ -2,31 +2,34 @@ import { Outlet } from 'react-router-dom';
 import Student from '../StudentCard/studentCard';
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import {useState, useEffect} from 'react';
+import {getStudents} from '../../utils/apiCalls';
 import './portfolios.css';
 
 function Portfolios() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [studentCards, setStudentCards] = useState([]);
 
+    const students = () => {
+        getStudents()
+            .then((data) => {
+                setIsLoaded(true);
+                setStudentCards(data['data'].map((student) => {
+                    return (
+                        <Col>
+                            <Student
+                            name={student.attributes.name}
+                            avatar= {student.attributes.avatar_url}
+                            key={student.id}
+                            />
+                        </Col>
+                    );
+                }));
+            })
+    }
+
     useEffect( () => {
-        fetch('https://digital-media-api.herokuapp.com/api/v1/students')
-                        .then(response => response.json())
-                        .then(
-                            (data) => {
-                                setIsLoaded(true);
-                                setStudentCards(data['data'].map((student) => {
-                                    return (
-                                        <Col>
-                                            <Student
-                                            name={student.attributes.name}
-                                            avatar= {student.attributes.avatar_url}
-                                            key={student.id}
-                                            />
-                                        </Col>
-                                    );
-                                }));
-                            })
-    })
+        students()
+    }, [])
 
     if(isLoaded) {
         return (
