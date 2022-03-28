@@ -29,10 +29,10 @@ function App() {
           <Route path='/resources'
           >
           </Route>
-          <Route path='/upload' element={<Upload/>}>
-          </Route>
-          <Route path='/update' element={<Admin/>}>
-          </Route>
+          {/* <Route path='/upload' element={<Upload/>}>
+          </Route> */}
+          {/* <Route path='/update' element={<Admin/>}>
+          </Route> */}
         </Routes>
       <Footer />
     </>
